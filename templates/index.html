@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Golang</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Data Mahasiswa</h1>
+        
+        <div class="header-actions">
+            <a href="/tambah" class="btn btn-primary">➕ Tambah Mahasiswa</a>
+        </div>
+
+        {{if .}}
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>NIM</th>
+                        <th>Email</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{range $index, $mhs := .}}
+                    <tr>
+                        <td>{{add $index 1}}</td>
+                        <td>{{$mhs.Nama}}</td>
+                        <td>{{$mhs.NIM}}</td>
+                        <td>{{$mhs.Email}}</td>
+                        <td class="actions">
+                            <a href="/edit/{{$mhs.ID}}" class="btn btn-edit">✏️ Edit</a>
+                            <a href="/hapus/{{$mhs.ID}}" class="btn btn-delete" onclick="return confirm('Yakin mau hapus data ini?')">🗑️ Hapus</a>
+                        </td>
+                    </tr>
+                    {{end}}
+                </tbody>
+            </table>
+        </div>
+        {{else}}
+        <div class="empty-state">
+            <p>😔 Belum ada data mahasiswa</p>
+            <a href="/tambah" class="btn btn-primary">Tambah Data Pertama</a>
+        </div>
+        {{end}}
+    </div>
+
+    <script>
+        // Konfirmasi sebelum hapus
+        function confirmDelete() {
+            return confirm('Yakin mau hapus data ini?');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Data</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✏️ Edit Data Mahasiswa</h1>
+        
+        <div class="form-container">
+            <form action="/update" method="POST" class="form">
+                <input type="hidden" name="id" value="{{.ID}}">
+                
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" value="{{.Nama}}" required placeholder="Masukkan nama lengkap">
+                </div>
+
+                <div class="form-group">
+                    <label for="nim">NIM:</label>
+                    <input type="text" id="nim" name="nim" value="{{.NIM}}" required placeholder="Masukkan NIM">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="{{.Email}}" required placeholder="Masukkan email">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">💾 Update Data</button>
+                    <a href="/" class="btn btn-secondary">❌ Batal</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
