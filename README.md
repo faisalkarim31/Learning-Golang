@@ -17,11 +17,11 @@ Learning-Golang/
 - handlers.go
 - go.mod
 - templates/
-  ├── index.html
-  ├── tambah.html
-  └── edit.html
+  - index.html
+  - tambah.html
+  - edit.html
 - static/
-  └── style.css
+  - style.css
 
 ## 🎯 Fitur Aplikasi
 
