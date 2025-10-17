@@ -7,7 +7,7 @@ Aplikasi CRUD (Create, Read, Update, Delete) sederhana untuk mengelola data maha
 - **Frontend**: HTML + CSS
 - **Admin Database**: phpMyAdmin
 
-## 📁 Struktur Project
+## Struktur Project
 
 Learning-Golang/
 
@@ -23,7 +23,7 @@ Learning-Golang/
 - static/
   - style.css
 
-## 🎯 Fitur Aplikasi
+## Fitur Aplikasi
 
 - **Tambah Data**: Menambah data mahasiswa baru
 - **Lihat Data**: Menampilkan semua data mahasiswa dalam tabel
